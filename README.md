@@ -9,7 +9,7 @@
 ```toml
 [dev] # 任务名
 url="https://xxx.jenkdins.com/task"
-branch="$jtl_git_branch"
+branch="$(jtl_git_branch)"
 other_custom_task_param="xxxx"
 ```
 

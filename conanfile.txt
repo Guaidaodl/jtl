@@ -1,5 +1,6 @@
 [requires]
 cli11/2.2.0
+toml11/3.7.1
 cpp-httplib/0.10.8
 
 [generators]
