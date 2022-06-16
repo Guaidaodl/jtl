@@ -9,4 +9,8 @@ conan_basic_setup()
 
 add_executable(main src/main.cc src/jtl.cc)
 
+target_precompile_headers(main 
+  PRIVATE 
+    src/pch.h
+)
 target_link_libraries(main ${CONAN_LIBS})

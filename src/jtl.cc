@@ -1,10 +1,5 @@
 #include "jtl.h"
 
-#include <CLI/App.hpp>
-#include <CLI/Config.hpp>
-#include <CLI/Formatter.hpp>
-#include <toml.hpp>
-
 int JtlApplication(int argc, char *argv[]) {
   Options options;
   int parse_result = ParseArguments(argc, argv, options);
