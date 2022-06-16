@@ -1,7 +1,6 @@
 #ifndef JTL_JTL_H_
 #define JTL_JTL_H_
 
-#include "pch.h"
 #include <string>
 
 int JtlApplication(int argc, char *argv[]);
@@ -18,6 +17,7 @@ int ParseArguments(int argc, char *argv[], Options &options);
 /// 运行任务
 int RunTask(Options &options);
 
+/// 任务参数
 struct BuildTask {
  public:
   std::string url;
@@ -28,6 +28,9 @@ int loadTask(std::string &taskName, BuildTask &task);
 
 /// 获取 .jtl 的地址. 未找到则返回 ""
 std::string FindJtlFile();
+
+/// 执行任务
+int RunBuildTask(const BuildTask &task);
 
 
 #endif // JTL_JTL_H_

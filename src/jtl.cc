@@ -1,5 +1,7 @@
 #include "jtl.h"
 
+#include "pch.h"
+
 int JtlApplication(int argc, char *argv[]) {
   Options options;
   int parse_result = ParseArguments(argc, argv, options);
@@ -37,9 +39,7 @@ int RunTask(Options &options) {
     return load_result;
   }
 
-  std::cout << "Run Task:\n"
-            << "url = " << task.url << std::endl;
-  return 0;
+  return RunBuildTask(task);
 }
 
 int loadTask(std::string &taskName, BuildTask &task) {
@@ -84,4 +84,14 @@ std::string FindJtlFile() {
   } else {
     return "";
   }
+}
+
+int RunBuildTask(const BuildTask &task) { 
+  std::cout << "Run Task:\n"
+            << "url = " << task.url << std::endl;
+
+  httplib::Client client("http://jenkinsmobile.bigo.sg:8080/view/HelloTalk/job");
+  auto res = client.Get("/hellotalk-android");
+  std::cout << res->status << std::endl;
+  return 0; 
 }
