@@ -1,4 +1,17 @@
 build
+
+# clion
+.idea
+cmake-build-debug
+
+#clangd
 .cache
+
+#vscode
 .vscode
+
+#vim
 .tasks
+
+#本地测试
+/test
