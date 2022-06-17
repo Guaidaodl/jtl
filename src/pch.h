@@ -6,7 +6,6 @@
 #include <CLI/Formatter.hpp>
 
 #include <toml.hpp>
-
-#include <httplib.h>
+#include <cpr/cpr.h>
 
 #endif

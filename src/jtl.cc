@@ -90,8 +90,5 @@ int RunBuildTask(const BuildTask &task) {
   std::cout << "Run Task:\n"
             << "url = " << task.url << std::endl;
 
-  httplib::Client client("http://jenkinsmobile.bigo.sg:8080/view/HelloTalk/job");
-  auto res = client.Get("/hellotalk-android");
-  std::cout << res->status << std::endl;
-  return 0; 
+  return 0;
 }
